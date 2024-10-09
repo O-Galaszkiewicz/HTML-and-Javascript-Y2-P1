@@ -1,0 +1,99 @@
+Coursework 1:
+	Gambling Game:
+		Main Menu (index.html)
+		Login Page (login.html)
+		Registration (registration.html)
+		Game Select (games.html)
+			Blackjack
+			Poker
+			Roulette
+			Slot Machine
+			Bingo
+			Baccarat
+			Craps
+			Odds and Evens
+			Hazard
+
+			Cleanup (point and click)
+
+		Bank (bank.html)
+		Leaderboard (rankings.html)
+			Total:
+				Name
+				Score
+
+			Blackjack:
+				Name
+				Score
+				Win
+				Loss
+				Winrate
+
+			Poker:
+				Name
+				Score
+				Win
+				Loss
+				Winrate
+
+			Roulette:
+				Name
+				Score
+				Win
+				Loss
+				Winrate
+
+			Slot Machine:
+				Name
+				Score
+				Win
+				Loss
+				Winrate
+
+			Bingo:
+				Name
+				Score
+				Win
+				Loss
+				Winrate
+
+			Baccarat:
+				Name
+				Score
+				Win
+				Loss
+				Winrate
+
+			Craps:
+				Name
+				Score
+				Win
+				Loss
+				Winrate
+
+			Odds and Evens:
+				Name
+				Score
+				Win
+				Loss
+				Winrate
+
+			Hazard:
+				Name
+				Score
+				Win
+				Loss
+				Winrate
+
+
+			Cleanup:
+				Name
+				Score
+				Points
+				Time
+
+
+
+Score = Money
+Loan interest takes earnings from games
+Score is always a whole number
