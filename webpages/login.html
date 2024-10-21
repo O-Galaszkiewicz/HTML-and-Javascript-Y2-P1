@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CasHub</title>
+    <script defer src="../webpages-js/userdata.mjs"></script>
 </head>
 
 <body>
@@ -14,14 +15,30 @@
         <a href="registration.html">Registration</a>
     </nav>
 
-    <h1>Login</h1>
-    <p>text</p>
+    <h1 align="center">Login</h1>
 
-    </div>
-    Name: <input type="text"> <br>
-    Email: <input type="email"> <br>
-    Password: <input type="password">
-    </div>
+    <div id="error"></div>
+    <br>
+    <form id="form" action="" method="get">
+        <div>
+            <label for="username">Username</label> <br>
+            <input id="username" name="username" type="text" size="32" required>
+        </div>
+        <div>
+            <label for="password">Password</label> <br>
+            <input id="password" name="password" type="password" size="32" required>
+        </div>
+        <div>
+            <label for="email">Email</label> <br>
+            <input id="email" name="email" type="email" size="32" required>
+        </div>
+        <div>
+            <label for="phonenum">Phone Number</label> <br>
+            <input id="phonenum" name="phonenum" type="tel" size="32" required>
+        </div>
+        <button id="login" type="submit">Login</button>
+        <button type="reset">Clear</button>
+    </form>
 
 </body>
 

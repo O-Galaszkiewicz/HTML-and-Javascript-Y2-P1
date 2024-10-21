@@ -1,4 +1,4 @@
-/* Header Text Colour */
+/* Header Text Colour
 h1,
 h2 {
     color: #4161e0;
@@ -9,22 +9,22 @@ h2 {
     margin: 20px;
 }
 
-/*Image left of header*/
+Image left of header
 img {
     float: left;
 }
 
-/*Affect Class only*/
+/*Affect Class only
 .MainPara {
     color: aqua;
 }
 
-/*Affect ID only*/
+/*Affect ID only
 #MainID {
     color: green;
 }
 
-/*Affect Navigation Bar*/
+/*Affect Navigation Bar
 nav a {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -32,4 +32,24 @@ nav a {
 #Main {
     display: grid;
     grid-template-columns: 100px auto;
+}
+*/
+
+h1,
+h2 {
+    color: #4161e0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: blueviolet;
+    padding: 20px 10px 30px 40xp;
+    border: 2px solid red;
+    margin: 20px;
+}
+
+Image left of header
+img {
+    float: left;
+}
+
+.card {
+    width: 100px;
 }
