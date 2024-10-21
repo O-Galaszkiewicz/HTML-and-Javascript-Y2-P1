@@ -16,7 +16,8 @@ class AuthSystem {
             username: this.username.value,
             password: this.password.value,
             email: this.email.value,
-            phonenum: this.phonenum.value
+            phonenum: this.phonenum.value,
+            score: 5000
         };
 
         if (JSON.stringify(userData) === localStorage.getItem('user')) {

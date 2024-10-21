@@ -57,14 +57,6 @@ Method 2 - Bet Size:
     Input value is stored
     Use Win-Loss Handling to multiply input value and add it to player score
 
-Method 3 - Hit:
-    When hit button is pushed, check deck and add available cards to deck (player or dealer)
-    Calculate the total deck value and check against the Win-Loss Handling
-
-Method 4 - Stand:
-    When stand button is pushed, switch to dealer
-    Calculate the total deck value and check against the Win-Loss Handling
-
 Method 5 - Split:
     When split button is pushed, create a new deck with the second card
     Calculate the total deck value and check against the Win-Loss Handling
@@ -79,10 +71,90 @@ Method 7 - Dealer:
 Method 8 - Deck Value:
     Will add the value of cards to return the total deck value
 
-Method 9 - Deck Cards:
-    Will store all available cards in an array
-    Will store all taken cards in a separate array
-
 ...
 
 */
+import {Deck} from './deck.mjs';
+
+class Blackjack {
+    deck;
+    dealImg;
+    
+    constructor() {
+        this.dealImg = document.querySelector('#cardImg');
+        
+        // Buttons
+        this.hitButton = document.getElementById('hitButton');
+        this.standButton = document.getElementById('standButton');
+        this.betButton = document.getElementById('betButton');
+        this.deck = new Deck();
+        
+        // Values
+        this.betVal = document.getElementById('betVal');
+        
+        // Player
+        
+        this.betButton.onclick = ()=> {
+            this.bet();
+        }
+    
+        this.standButton.onclick = ()=> {
+            this.stand();
+        }
+    
+        this.hitButton.onclick = ()=> {
+            this.hit();
+        }
+    }
+    
+    hit() {
+        // Call addCard method
+        // Push the return into array
+        // Call gameCondition method
+        const card = this.deck.addCard();
+        this.dealImg.src = card.src;
+        console.log(card);
+    }
+
+    stand() {
+        // Call dealer
+    }
+
+    bet() {
+        // If the Bet input is more than player score, send error
+        // Else:
+        //     Store Bet input
+        //     Take it from player score
+    }
+
+    player() {
+        playerCards = [];
+    }
+
+    dealer() {
+        dealerCards = [];
+        // Call hit method
+        // Push the return into dealer array
+        // Call gameCondition method
+    }
+
+    deckCards() {
+        //
+    }
+
+    addCard() {
+        //
+    }
+
+    gameCondition() {
+        // If current deck total is 21+ or less than other deck total, fail (x0 bet)
+        // If current deck total is equal to other deck total, tie (x1 bet)
+        // If current deck total is greater than other deck total, win (x2 bet)
+        // If current deck total is 21 on start, win (x2.5 bet)
+    }
+}
+
+// Initialize the Blackjack class
+document.addEventListener('DOMContentLoaded', () => {
+    new Blackjack();
+})
