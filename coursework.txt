@@ -1,23 +1,24 @@
 Coursework 1:
-	Gambling Game:
-		Main Menu (index.html)
-		Login Page (login.html)
-		Registration (registration.html)
-		Game Select (games.html)
-			Blackjack
-			Poker
-			Roulette
-			Slot Machine
-			Bingo
-			Baccarat
-			Craps
-			Odds and Evens
-			Hazard
+	CasHub:
+		CSS - Todo
+		Main Menu (index.html) - Done
+		Login Page (login.html) - Done
+		Registration (registration.html) - Done
+		Game Select (games.html) - Done
+			Blackjack - Todo
+			Poker - Todo
+			Roulette - Todo
+			Slot Machine - Todo
+			Bingo - Todo
+			Baccarat - Todo
+			Craps - Todo
+			Odds and Evens - Todo
+			Hazard - Todo
 
-			Cleanup (point and click)
+			Cleanup (point and click) - Todo
 
-		Bank (bank.html)
-		Leaderboard (rankings.html)
+		Bank (bank.html) - Todo
+		Leaderboard (rankings.html) - Todo
 			Total:
 				Name
 				Score
@@ -91,9 +92,3 @@ Coursework 1:
 				Score
 				Points
 				Time
-
-
-
-Score = Money
-Loan interest takes earnings from games
-Score is always a whole number
