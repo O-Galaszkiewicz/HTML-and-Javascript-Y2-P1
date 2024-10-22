@@ -7,12 +7,12 @@ export class DiceSides {
             this.sides.push(
                 {
                     side: face,
-                    src: `../images/Cards/${face}.svg`
+                    src: `../images/Dice/${face}.svg`
                 });
         }
     }
 
-    deal() {
+    addDice() {
         const index = Math.floor(this.sides.length * Math.random());
         const face = this.sides[index];
         this.sides.splice(index, 1);

@@ -5,40 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CasHub</title>
+    <link href="../css/style.css" rel="stylesheet">
     <script defer src="../webpages-js/userdata.mjs"></script>
 </head>
 
 <body>
 
-    <nav>
+    <nav class="navLink" align="center">
         <a href="index.html">Home</a>
         <a href="registration.html">Registration</a>
     </nav>
 
     <h1 align="center">Login</h1>
 
-    <div id="error"></div>
-    <br>
-    <form id="form" action="" method="get">
-        <div>
-            <label for="username">Username</label> <br>
-            <input id="username" name="username" type="text" size="32" required>
-        </div>
-        <div>
-            <label for="password">Password</label> <br>
-            <input id="password" name="password" type="password" size="32" required>
-        </div>
-        <div>
-            <label for="email">Email</label> <br>
-            <input id="email" name="email" type="email" size="32" required>
-        </div>
-        <div>
-            <label for="phonenum">Phone Number</label> <br>
-            <input id="phonenum" name="phonenum" type="tel" size="32" required>
-        </div>
-        <button id="login" type="submit">Login</button>
-        <button type="reset">Clear</button>
-    </form>
+    <div>
+        <form align="center" id="form" action="" method="get">
+            <div>
+                <label for="username">Username</label>
+                <div>
+                    <input id="username" name="username" type="text" size="32" required>
+                </div>
+                <br>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <div>
+                    <input id="password" name="password" type="password" size="32" required>
+                </div>
+                <br>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <div>
+                    <input id="email" name="email" type="email" size="32" required>
+                </div>
+                <br>
+            </div>
+            <div>
+                <label for="phonenum">Phone Number</label>
+                <div>
+                    <input id="phonenum" name="phonenum" type="tel" size="32" required>
+                </div>
+                <br>
+            </div>
+
+            <div><button id="login" type="submit">Login</button>
+                <button type="reset">Clear</button>
+            </div>
+            <br>
+            <div id="error"></div>
+        </form>
+    </div>
+
 
 </body>
 

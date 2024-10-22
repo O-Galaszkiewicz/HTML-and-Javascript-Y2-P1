@@ -86,13 +86,19 @@ class Blackjack {
         // Buttons
         this.hitButton = document.getElementById('hitButton');
         this.standButton = document.getElementById('standButton');
+        this.doubleButton = document.getElementById('doubleButton');
+        this.splitButton = document.getElementById('splitButton')
         this.betButton = document.getElementById('betButton');
-        this.deck = new Deck();
         
         // Values
         this.betVal = document.getElementById('betVal');
+        this.playerCards = [];
+        this.dealerCards = [];
         
         // Player
+        
+        // Other
+        this.deck = new Deck();
         
         this.betButton.onclick = ()=> {
             this.bet();
@@ -107,17 +113,25 @@ class Blackjack {
         }
     }
     
-    hit() {
+    hit(_personCards) {
         // Call addCard method
-        // Push the return into array
-        // Call gameCondition method
         const card = this.deck.addCard();
         this.dealImg.src = card.src;
+        // Push the return into array
+        this._personCards.
+        
+        /*
+        works
         console.log(card);
+        */
+        
+        // Call gameCondition method
+        this.gameCondition;
     }
 
     stand() {
         // Call dealer
+        this.dealer;
     }
 
     bet() {
@@ -128,27 +142,29 @@ class Blackjack {
     }
 
     player() {
-        playerCards = [];
+        //
     }
 
     dealer() {
-        dealerCards = [];
-        // Call hit method
-        // Push the return into dealer array
+        while (dealerTotal < 17) {
+            // Call hit method
+            this.hit(this.dealerCards);
+            // Push the return into dealer array
+        }
         // Call gameCondition method
-    }
-
-    deckCards() {
-        //
-    }
-
-    addCard() {
-        //
+        this.gameCondition();
     }
 
     gameCondition() {
-        // If current deck total is 21+ or less than other deck total, fail (x0 bet)
-        // If current deck total is equal to other deck total, tie (x1 bet)
+        if ((playerTotal > 21) || (playerTotal < dealerTotal)) {
+            // Fail (x0 Bet)
+        } else if (playerTotal === dealerTotal) {
+            // Tie (x1 Bet)
+        } else if ((playerTotal > dealerTotal) && (playerTotal <= 21)) {
+            // Win (x2 Bet)
+        } else {
+            // Blackjack (x2.5 Bet)
+        }
         // If current deck total is greater than other deck total, win (x2 bet)
         // If current deck total is 21 on start, win (x2.5 bet)
     }

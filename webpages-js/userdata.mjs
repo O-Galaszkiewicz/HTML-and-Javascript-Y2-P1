@@ -4,6 +4,8 @@ class AuthSystem {
         this.password = document.getElementById('password');
         this.email = document.getElementById('email');
         this.phonenum = document.getElementById('phonenum');
+        this.score = 5000
+
         this.errorElement = document.getElementById('error');
         this.form = document.getElementById('form');
 
@@ -17,7 +19,7 @@ class AuthSystem {
             password: this.password.value,
             email: this.email.value,
             phonenum: this.phonenum.value,
-            score: 5000
+            score: this.score.valueOf()
         };
 
         if (JSON.stringify(userData) === localStorage.getItem('user')) {
@@ -38,9 +40,17 @@ class AuthSystem {
 
         if ((storedUser.username === this.username.value) && (storedUser.password === this.password.value)) {
             console.log('Login successful!');
+
+            sessionStorage.setItem('loggedInUser', JSON.stringify({
+                username: storedUser.username,
+                score: storedUser.score
+            }));
+
             return true;
-        } else {
-            console.log('Invalid username or password');
+        }
+        
+        else {
+            console.log('Invalid details');
             return false;
         }
     }
