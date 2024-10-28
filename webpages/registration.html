@@ -11,15 +11,15 @@
 
 <body>
 
-    <nav class="navLink" align="center">
+    <nav>
         <a href="index.html">Home</a>
         <a href="login.html">Login</a>
     </nav>
 
-    <h1 align="center">Registration</h1>
+    <h1 class="pageName">Registration</h1>
 
     <div>
-        <form align="center" id="form" action="" method="get">
+        <form id="form" action="" method="get">
             <div>
                 <label for="username">Username</label>
                 <div>
@@ -48,8 +48,12 @@
                 </div>
                 <br>
             </div>
-            <button id="register" type="submit">Register</button>
-            <button type="reset">Clear</button>
+
+            <div>
+                <button id="register" type="submit">Register</button>
+                <button type="reset">Clear</button>
+            </div>
+            <br>
             <div id="error"></div>
         </form>
     </div>
