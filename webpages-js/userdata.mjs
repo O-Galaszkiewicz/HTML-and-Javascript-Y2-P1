@@ -38,12 +38,12 @@ class AuthSystem {
             return false;
         }
 
-        if ((storedUser.username === this.username.value) && (storedUser.password === this.password.value)) {
+        if ((storedUser.username === this.username.value) && (storedUser.password === this.password.value) && 
+        (storedUser.email === this.email.value) && (storedUser.phonenum === this.phonenum.value)) {
             console.log('Login successful!');
 
             sessionStorage.setItem('loggedInUser', JSON.stringify({
-                username: storedUser.username,
-                score: storedUser.score
+                username: storedUser.username
             }));
 
             return true;
