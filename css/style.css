@@ -45,7 +45,20 @@ nav a {
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.1));
 }
 
-.NavLink {
+nav {
+    text-align: center;
+    border-image: linear-gradient(to right, #ffd700, #dfbd00) 1;
+    background: linear-gradient(to right, #ffd700, #dfbd00);
+}
+
+#form {
+    text-align: center;
+    border-image: linear-gradient(to right, #ffd700, #dfbd00) 1;
+    background: linear-gradient(to right, #ffd700, #dfbd00);
+}
+
+.pageName {
+    text-align: center;
     border-image: linear-gradient(to right, #ffd700, #dfbd00) 1;
     background: linear-gradient(to right, #ffd700, #dfbd00);
 }
