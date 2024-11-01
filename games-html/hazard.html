@@ -11,12 +11,65 @@
 
 <body>
 
-    <nav>
-        <a href="../webpages/games.html">Games</a>
-    </nav>
+    <div id="rulesModal" class="modal">
+        <div class="modal-content">
+            <h1 class="text">Rules of Hazard:</h1>
+            <h2 class="text">Place Your Bet:</h2>
+            <p class="text">Enter your desired bet amount and choose a main number - 5 to 9.</p>
+            <h2 class="text">Rolling the Dice:</h2>
+            <p class="text">Press the "Roll" button to roll two dice.</p>
+            <h2 class="text">Check Your Roll:</h2>
+            <h3 class="text">Lose Conditions:</h3>
+            <p class="text">Roll a dice total of 2 or 3.</p>
+            <p class="text">Roll an 11 or 12 if your main is 5 or 9.</p>
+            <p class="text">Roll 11 if your main is 6 or 8.</p>
+            <p class="text">Roll 12 if your main is 7.</p>
+            <h3 class="text">Win Conditions:</h3>
+            <p class="text">Roll a total that matches your main.</p>
+            <p class="text">Roll 12 if your main is 6 or 8.</p>
+            <p class="text">Roll 11 if your main is 7.</p>
+            <p class="text">If your roll matches your chosen "Chance" after an initial roll, you win.</p>
+            <h2 class="text">After the Roll:</h2>
+            <p class="text">If you lose, your bet is gone.</p>
+            <p class="text">If you win, your bet is doubled.</p>
+            <p class="text">If you roll a "Chance", you can continue rolling until you either win or lose based on your chosen main number.</p>
+            <button class="button" id="rulesButton">Ok</button>
+        </div>
+    </div>
+
+    <div id="betModal" class="modal">
+        <div class="modal-content">
+            <h2 class="text">Enter Your Bet & Choose Your Main</h2>
+            <p class="text" id="betReason"></p>
+            <input type="number" id="betVal" placeholder="Enter Bet Amount">
+            <div>
+                <label class="text">Choose Your Main:</label>
+                <div id="mainSelection">
+                    <button class="button mainButton" data-main="5">5</button>
+                    <button class="button mainButton" data-main="6">6</button>
+                    <button class="button mainButton" data-main="7">7</button>
+                    <button class="button mainButton" data-main="8">8</button>
+                    <button class="button mainButton" data-main="9">9</button>
+                </div>
+            </div>
+            <button class="button" id="betButton">Bet</button>
+        </div>
+    </div>
+
+    <div id="resultModal" class="modal hidden">
+        <div class="modal-content">
+            <h2 class="text" id="resultMessage"></h2>
+            <p class="text" id="resultReason"></p>
+            <button class="button" id="playAgainButton">Play Again</button>
+            <button class="button" id="leaveButton">Leave Game</button>
+        </div>
+    </div>
+
+    <div id="playerDiceDiv">
+    </div>
 
     <div>
-        <img src="" id="diceImg" width="140px">
+        <button class="button" id="rollDiceButton">Roll</button>
     </div>
 
 </body>

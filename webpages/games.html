@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CasHub</title>
     <link href="../css/style.css" rel="stylesheet">
+    <script defer type="module" src="../webpages-js/userdata.mjs"></script>
+    <script defer type="module" src="../webpages-js/webpages.mjs"></script>
 </head>
 
 <body>
 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="login.html">Login</a>
-        <a href="rankings.html">Rankings</a>
+        <button class="button" id="indexNavButton">Home</button>
+        <button class="button" id="rankingsNavButton">Rankings</button>
     </nav>
 
     <h1 class="pageName">Game Select</h1>
@@ -22,8 +23,16 @@
         <nav>
             <a href="../games-html/blackjack.html"><img src="../images/Website/blackjack.svg" width="200px"></a>
             <a href="../games-html/hazard.html"><img src="../images/Website/hazard.svg" width="200px"></a>
-            <p><small>More to come</small></p>
+            <p class="text"><small>More to come</small></p>
         </nav>
+    </div>
+
+    <div id="loginModal" class="modal hidden">
+        <div class="modal-content">
+            <h2 class="text">Log In</h2>
+            <p class="text">You need to be logged in to play the games</p>
+            <button class="button" id="loginNavButton">Log In</button>
+        </div>
     </div>
 
 </body>

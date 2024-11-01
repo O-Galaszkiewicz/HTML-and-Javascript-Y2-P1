@@ -11,24 +11,53 @@
 
 <body>
 
-    <div>
-        <nav>
-            <a href="../webpages/games.html">Games</a>
-        </nav>
+    <div id="rulesModal" class="modal">
+        <div class="modal-content">
+            <h1 class="text">Rules of Blackjack:</h1>
+            <h2 class="text">Place Your Bet:</h2>
+            <p class="text">Enter your desired bet amount.</p>
+            <h2 class="text">Hitting Cards:</h2>
+            <p class="text">Press the "Hit" button to add more cards to your deck.</p>
+            <h2 class="text">Check Your Card Total:</h2>
+            <h3 class="text">Lose Conditions:</h3>
+            <p class="text">You have a Card Total exceeding 21.</p>
+            <p class="text">The Dealers Card Total is more than yours.</p>
+            <h3 class="text">Draw Condition:</h3>
+            <p class="text">Both you and the Dealer have the same Card Totals.</p>
+            <h3 class="text">Win Conditions:</h3>
+            <p class="text">You have more than the Dealers Card Total.</p>
+            <p class="text">The Dealer busts.</p>
+            <button class="button" id="rulesButton">Ok</button>
+        </div>
     </div>
 
-    <div id="DealerCardDiv">
-        <img src="" id="cardImg" width="140px">
+    <div id="betModal" class="modal">
+        <div class="modal-content">
+            <h2 class="text">Enter Your Bet</h2>
+            <p class="text" id="betReason"></p>
+            <input type="number" id="betVal" placeholder="Enter Bet Amount">
+            <button class="button" id="betButton">Bet</button>
+        </div>
     </div>
 
-    <div id="PlayerCardDiv">
-        <img src="" id="cardImg" width="140px">
+    <div id="resultModal" class="modal hidden">
+        <div class="modal-content">
+            <h2 class="text" id="resultMessage"></h2>
+            <p class="text" id="resultReason"></p>
+            <button class="button" id="playAgainButton">Play Again</button>
+            <button class="button" id="leaveButton">Leave Game</button>
+        </div>
     </div>
+
+    <div id="dealerCardDiv">
+    </div>
+
+    <div id="playerCardDiv">
+    </div>
+
     <div>
-        <button id="hitButton">Hit</button>
-        <button id="standButton">Stand</button>
-        <button id="betButton">Bet</button>
-        <input type="number" id="betVal">
+        <button class="button" id="hitButton">Hit</button>
+        <button class="button" id="standButton">Stand</button>
     </div>
 
 </body>

@@ -1,26 +1,52 @@
-// update user score
-function updateScore() {
-    const userName = sessionStorage.loggedInUser;
-    const user = JSON.parse(localStorage[userName]);
-    if (score > user.topScore) {
-        user.topScore = score;
+import { AuthSystem } from "./userdata.mjs";
 
-        localStorage[userName] = JSON.stringify(user);
+class Rankings {
+    constructor() {
+        this.rankingsBody = document.getElementById("rankingsBody");
+        this.authSystem = new AuthSystem();
+    }
+
+    getAllUsers() {
+        return JSON.parse(localStorage.getItem("userData")) || [];
+    }
+
+    sortUserData(users) {
+        return users.sort((a, b) => b.score - a.score);
+    }
+
+    clearTable() {
+        this.rankingsBody.innerHTML = "";
+    }
+
+    displayRankings() {
+        const userData = this.getAllUsers();
+        const sortedUsers = this.sortUserData(userData);
+
+        this.clearTable();
+
+        sortedUsers.forEach(user => {
+            const row = document.createElement("tr");
+
+            // Create and append the username cell with a CSS class
+            const usernameCell = document.createElement("td");
+            usernameCell.textContent = user.username;
+            usernameCell.classList.add("text");
+            row.appendChild(usernameCell);
+
+            // Create and append the score cell with a CSS class
+            const scoreCell = document.createElement("td");
+            scoreCell.textContent = user.score;
+            scoreCell.classList.add("text");
+            row.appendChild(scoreCell);
+
+            // Append the row to the table body
+            this.rankingsBody.appendChild(row);
+        });
     }
 }
 
-// user ranking table
-function ranking() {
-    let tableStr = '<table><tr><th>Name</th><th>Score</th></tr>';
-    const keys = Object.keys(localStorage);
-    console.log(localStorage);
-    for(let key of keys) {
-        console.log(key)
-        const user = JSON.parse(localStorage[key]);
-        console.log(user);
-        tableStr += `<tr><td>${user.name}</td><td>${user.topScore}</td></tr>`
-    }
-    tableStr += "</table>"
-    const tableDiv = document.querySelector('#Ranking');
-    tableDiv.innerHTML = tableStr;
-}
+// Initialize the Rankings class when the DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
+    const rankings = new Rankings();
+    rankings.displayRankings();
+});
