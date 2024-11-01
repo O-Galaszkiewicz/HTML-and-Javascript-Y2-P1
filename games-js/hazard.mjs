@@ -144,8 +144,6 @@ class Hazard {
             if (this.playerRoll === 2 || this.playerRoll === 3) {
                 resultMessage = "You Lose";
                 resultReason = `You rolled a ${this.playerRoll}, which is an Out.`;
-                console.log(resultMessage);
-                console.log(resultReason);
                 this.endGame("out")
                 this.playerTurns += 1;
             }
@@ -156,8 +154,6 @@ class Hazard {
                 (this.playerMain === 5 || this.playerMain === 9)) {
                 resultMessage = "You Lose";
                 resultReason = `You rolled a ${this.playerRoll} with a main of ${this.playerMain}, which is an Out.`;
-                console.log(resultMessage);
-                console.log(resultReason);
                 this.endGame("out")
                 this.playerTurns += 1;
             }
@@ -167,8 +163,6 @@ class Hazard {
                 (this.playerMain === 6 || this.playerMain === 8)) {
                 resultMessage = "You Lose";
                 resultReason = `You rolled a ${this.playerRoll} with a main of ${this.playerMain}, which is an Out.`;
-                console.log(resultMessage);
-                console.log(resultReason);
                 this.endGame("out")
                 this.playerTurns += 1;
             }
@@ -177,8 +171,6 @@ class Hazard {
             else if (this.playerRoll === 12 && this.playerMain === 7) {
                 resultMessage = "You Lose";
                 resultReason = `You rolled a ${this.playerRoll} with a main of ${this.playerMain}, which is an Out.`;
-                console.log(resultMessage);
-                console.log(resultReason);
                 this.endGame("out")
                 this.playerTurns += 1;
             }
@@ -187,8 +179,6 @@ class Hazard {
             else if (this.playerRoll === this.playerMain) {
                 resultMessage = "You Win";
                 resultReason = `You rolled a ${this.playerRoll} with a main of ${this.playerMain}, which is a Nick.`;
-                console.log(resultMessage);
-                console.log(resultReason);
                 this.endGame("nick");
             }
 
@@ -197,8 +187,6 @@ class Hazard {
                 (this.playerMain === 6 || this.playerMain === 8)) {
                 resultMessage = "You Win";
                 resultReason = `You rolled a ${this.playerRoll} with a main of ${this.playerMain}, which is a Nick.`;
-                console.log(resultMessage);
-                console.log(resultReason);
                 this.endGame("nick");
             }
 
@@ -206,8 +194,6 @@ class Hazard {
             else if (this.playerRoll === 11 && this.playerMain === 7) {
                 resultMessage = "You Win";
                 resultReason = `You rolled a ${this.playerRoll} with a main of ${this.playerMain}, which is a Nick.`;
-                console.log(resultMessage);
-                console.log(resultReason);
                 this.endGame("nick");
             }
 
@@ -221,8 +207,6 @@ class Hazard {
             if (this.playerRoll === this.playerMain) {
                 resultMessage = "You Lose";
                 resultReason = `You rolled a ${this.playerRoll} with a main of ${this.playerMain}, which is an Out.`;
-                console.log(resultMessage);
-                console.log(resultReason);
                 this.endGame("out")
             }
 
@@ -230,8 +214,6 @@ class Hazard {
             else if (this.playerRoll === this.playerChance) {
                 resultMessage = "You Win";
                 resultReason = `You rolled a ${this.playerRoll}, which matches your Chance of ${this.playerChance}, earning a Nick!`;
-                console.log(resultMessage);
-                console.log(resultReason);
                 this.endGame();
             }
         }

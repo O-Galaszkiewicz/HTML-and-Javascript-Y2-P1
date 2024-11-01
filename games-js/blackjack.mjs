@@ -62,7 +62,6 @@ class Blackjack {
         // Use the addCard method from the Deck class
         const card = this.deck.addCard();
         const cardValue = this.getCardVal(card, person);
-        console.log(cardValue)
         const newCardImg = document.createElement("img");
         newCardImg.src = card.src;
 
